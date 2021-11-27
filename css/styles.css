@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+body{
+    font-family: 'Poppins';
+    color: white;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.homePage{
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)) ,url(../images/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 0;
+    height: 100vh;
+}
+.navbar{
+    font-size: large;
+    padding: 2%;
+}
+.logo{
+    font-family: 'Dancing Script', cursive;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+.navbar a:hover{
+    text-decoration: underline;
+    color: yellow;
+}
+#first{
+    font-size: 60px;
+    line-height: 80px;
+    color: gre;
+}
+.btn{
+    width: 150px;
+}
+.btn a:hover{
+    color: black;
+}
