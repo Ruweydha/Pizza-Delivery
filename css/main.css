@@ -1,0 +1,20 @@
+body{
+    color: black;
+}
+.menu1{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url(../images/background2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: yellow;
+}
+a{
+    color: black;
+}
+img{
+    width: 366px;
+    height: 300px;  
+}
+h3{
+    color: yellow;
+}
