@@ -17,11 +17,12 @@ body{
     height: 100vh;
 }
 .navbar{
-    font-size: large;
+    font-size: x-large;
     padding: 2%;
 }
 .logo{
     font-family: 'Dancing Script', cursive;
+    font-weight: bold;
 }
 a{
     color: white;
