@@ -141,7 +141,65 @@
           </div>
       </div>
       <div class="button text-center btn-lg mt-4">
-         <button class="btn-warning btn btn-md">Place Order</button>
+         <button class="btn-warning btn btn-md md-5">Place Order</button>
+      </div>
+      <div class="container mt-5">
+          <h3>Place your order by filling out this form</h3>
+            <form id="form" class="form">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label class="form-label" for="Name" >Name:</label>  
+                            <input class = "form-control"type="text" placeholder="Enter your name" id="name"> <br>
+
+                        </div>
+
+                        <div class="col-md-6">
+                             <label class="form-label" for="pizza">Choose a flavour:</label>
+                            <select class="form-control" name="pizza" id="pizza">
+                                <option value="Chicken Barbacue">Chicken Barbecue</option>
+                                <option value="Chicken Tikka">Chicken Tikka</option>
+                                <option value="Hawaaian">Hawaaian</option>
+                                <option value="Peperroni">Peperroni</option>
+                                <option value="Veggie">Veggie</option>
+                                <option value="Cheese">cheese</option>
+                           </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" for="Size">Choose the Size:</label>
+                            <select name="size" class="form-control" id="size">
+                                <option value="Large">Large</option>
+                                <option value="Medium">Medium</option>
+                                <option value="Small">Small</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" for="Crust">Pick a Crust:</label>
+                            <select name="crust" class="form-control" id="crust">
+                                <option value="Crispy">Crispy Crust</option>
+                                <option value="Stuffed">Stuffed Crust</option>
+                                <option value="Glutten Free">Glutten Free</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" for="Toppings">Pick the topping you want:</label>
+                            <select name="Mushrooms" class="form-control" id="Mushrooms">
+                                <option value="Pineapple">Pineapple</option>
+                                <option value="Stuffed">Stuffed Crust</option>
+                                <option value="Cheese">Cheese</option>
+                            </select> 
+                        </div>
+                        <div class="col-md-6">
+                            <label for="quantity" class="form-label">Enter the number of pizzas you want:</label>
+                            <input type="number" class="form-control" id="quantity" placeholder="Enter the number of pizzas you want">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="button text-center btn-lg mt-4">
+                     <button class="btn-warning btn btn-md">Confirm Order</button>
+                </div>
+            </form>
       </div>
   </div>
   
