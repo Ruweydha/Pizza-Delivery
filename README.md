@@ -12,6 +12,14 @@ You can also acces it through a web browser no installation is required.
 * Either a computer,phone,tablet or an Ipad
 * An access to the Internet
 
+## BDD.
+* The user can make an order by filling out a form asking to to select the size, crust, toppings and quantity of pizza they want.
+* The user needs to fill all fields. If not you get an alert saying all fields should be filled.
+* The user clicks on order button and a table is filled with their order and the total price to be paid.
+* The user then clicks the delivery button where a confirm appears on whether or not they would like the pizza to be delivered to them or not at an extra cost of 200.
+* If they want the pizza to be delivered a prompt appears that asks them for the location they would like it to be delivered. Then an alert that notifies them of the new total and how long it woud take for it to delivered. Their total increases by 200.
+* A checkout button appears where on clicking it the user will be alerted to make a payment of their total and the page refreshes.
+
 ## Known Bugs
 None at the moment.
 ## Technologies Used
@@ -19,6 +27,7 @@ None at the moment.
 * CSS- Which was used to style the different elements in the page.
 * JavaScript - Which was used to validate the form. 
 * jQuerry - Which was used to make the page interactive.
+* Bootstrap - Add responsiveness to page.
     
 ## Support and contact details
 LinkedIn - [Ruweydha Abdinoor](https://www.linkedin.com/in/ruweydha-abdinoor-859921224/)
