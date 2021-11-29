@@ -49,3 +49,9 @@ h3{
 h1{
     color: yellow;
 }
+span{
+    color: yellow;
+}
+.summary{
+    display: none;
+}
