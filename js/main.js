@@ -30,6 +30,9 @@ Order.prototype.Delivery = function(amount){
   var priceOfSize;
   let priceOfCrust;
   let priceOfTopping;
+
+  var totalPrice =[];
+  let buyers = [];
  
 //User Interface Logic
 $("#form").submit(function(e){
@@ -175,19 +178,49 @@ $("#form").submit(function(e){
      let total = parseInt(priceOfSize) + parseInt(priceOfCrust) + parseInt(priceOfTopping);
      
     console.log(priceOfCrust, priceOfSize, priceOfTopping);
+    
+
+    $(".summary").show();
+    // $("span.name").text(buyer.name);
+    // $("span.Pizza").text(buyer.flavour);
+    // $("span.Size").text(`${buyer.size} - ksh ${priceOfSize}`);
+    // $("span.Crust").text(`${buyer.crust} - ksh ${priceOfCrust}`);
+    // $("span.Toppings").text(`${buyer.toppings} - ksh${priceOfTopping}`);
+    // $("span.Quantity").text(buyer.quantity);
+    // $("span.Total").text(buyer.total);
+    
+    let table = document.getElementById("table");
+    let row = table.insertRow();
+    var cell1 = row.insertCell();
+    var cell2 = row.insertCell();
+    var cell3 = row.insertCell();
+    var cell4 = row.insertCell();
+    var cell5 = row.insertCell();
+    var cell6 = row.insertCell();
+
+    
+
+
+    cell1.innerHTML = name;
+    cell2.innerHTML = flavour;
+    cell3.innerHTML = size;
+    cell4.innerHTML = toppings;
+    cell5.innerHTML = crust;
+    cell6.innerHTML = quantity;
+
     var buyer = new Order(name, flavour, size, crust, toppings, quantity, total);
 
     buyer.GetTotal(quantity);
 
+    totalPrice.push(buyer.total);
 
-    $(".summary").show();
-    $("span.name").text(buyer.name);
-    $("span.Pizza").text(buyer.flavour);
-    $("span.Size").text(`${buyer.size} - ksh ${priceOfSize}`);
-    $("span.Crust").text(`${buyer.crust} - ksh ${priceOfCrust}`);
-    $("span.Toppings").text(`${buyer.toppings} - ksh${priceOfTopping}`);
-    $("span.Quantity").text(buyer.quantity);
-    $("span.Total").text(buyer.total);
+    buyers.push(buyer);
+    console.log(buyers);
+
+    for(i=0; i<totalPrice.length; i++){
+        buyer.total += totalPrice[i];
+    }
+    document.getElementById("totalAmount").innerHTML =`Total: ${buyer.total}`;
 
     $("#name").val("");
     $("#pizza").val("");
