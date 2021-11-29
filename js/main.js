@@ -171,23 +171,11 @@ $("#form").submit(function(e){
                 priceOfTopping = 100;
             }
         }
-
-
     }
 }    
-     let total = parseInt(priceOfSize) + parseInt(priceOfCrust) + parseInt(priceOfTopping);
+    let total = parseInt(priceOfSize) + parseInt(priceOfCrust) + parseInt(priceOfTopping);
      
     console.log(priceOfCrust, priceOfSize, priceOfTopping);
-    
-
-    $(".summary").show();
-    // $("span.name").text(buyer.name);
-    // $("span.Pizza").text(buyer.flavour);
-    // $("span.Size").text(`${buyer.size} - ksh ${priceOfSize}`);
-    // $("span.Crust").text(`${buyer.crust} - ksh ${priceOfCrust}`);
-    // $("span.Toppings").text(`${buyer.toppings} - ksh${priceOfTopping}`);
-    // $("span.Quantity").text(buyer.quantity);
-    // $("span.Total").text(buyer.total);
     
     let table = document.getElementById("table");
     let row = table.insertRow();
@@ -197,9 +185,6 @@ $("#form").submit(function(e){
     var cell4 = row.insertCell();
     var cell5 = row.insertCell();
     var cell6 = row.insertCell();
-
-    
-
 
     cell1.innerHTML = name;
     cell2.innerHTML = flavour;
@@ -217,6 +202,8 @@ $("#form").submit(function(e){
     buyers.push(buyer);
     console.log(buyers);
 
+    Object.assign
+
     for(i=0; i<totalPrice.length; i++){
         buyer.total += totalPrice[i];
     }
@@ -229,18 +216,27 @@ $("#form").submit(function(e){
     $("#toppings").val("");
     $("#quantity").val("");
 
-    $(".checkout").click(function(){
+    $(".delivery").click(function(){
         var delivery = confirm("Would you like the pizza to be delivered to you at an extra cost of 200?")
         if (delivery == true){
             let location = prompt("Enter location to be delivered");
             buyer.Delivery(delivery);
             alert(`${name} Your pizza will be delivered to ${location} in the next 30mins. New total is ${buyer.total} Thanks for the order` );
+            document.getElementById("delivery").innerHTML = `Delivery: 200`;
+            document.getElementById("totalAmount").innerHTML =`New Total: ${buyer.total}`;
         }
         else{
             alert(`${name} Thanks for the order`);
         }
-        $(".summary").fadeOut();
-
+        $(this).fadeOut(function(){
+            $(".checkout").show(function(){
+                $(this).click(function(){
+                    alert(`Please proceed to make a payment of ${buyer.total}`);
+                    document. location. reload() ;
+                    $(this).hide();
+                })
+            })
+        });
     });
  
 });
